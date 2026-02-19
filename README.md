@@ -1,4 +1,5 @@
 # Automated Project Bootstrapping & Process Management
+VIDEO URL =
 
 ## Overview
 This project provides a shell script to automate the setup of a Student Attendance Tracker workspace. The script ensures reproducibility, efficiency, and reliability by creating the required directory structure, configuring settings, and handling interruptions gracefully.
