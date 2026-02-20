@@ -1,5 +1,5 @@
 # Automated Project Bootstrapping & Process Management
-VIDEO URL =
+VIDEO URL = "https://drive.google.com/file/d/1eR1bM3JBHJAR9e4NsAnaUjiwoQqX8Qm3/view?usp=sharing"
 
 ## Overview
 This project provides a shell script to automate the setup of a Student Attendance Tracker workspace. The script ensures reproducibility, efficiency, and reliability by creating the required directory structure, configuring settings, and handling interruptions gracefully.
@@ -14,8 +14,8 @@ attendance_tracker_{input}/
 │   ├── assets.csv
 │   └── config.json
 ├── reports/
-│   └── reports.log
-└── image.png (optional, if present in the source directory)
+    └── reports.log
+
 ```
 
 ## How to Run
@@ -31,7 +31,7 @@ attendance_tracker_{input}/
 ## Features
 - **Dynamic Configuration:**
   - The script prompts you to update attendance thresholds (Warning and Failure) and validates that your input is numeric before updating `config.json` using `sed`.
-- **Health Check:**
+- **Python3  Check:**
   - Checks if `python3` is installed and prints the version.
 - **Signal Trap & Cleanup:**
   - If you press Ctrl+C during execution, the script will archive the incomplete directory as `attendance_tracker_{input}_archive.tar.gz` and remove the incomplete directory to keep your workspace clean.
@@ -46,18 +46,15 @@ attendance_tracker_{input}/
 
 ## Notes
 - All file and folder names must match exactly as shown above for the script and Python logic to work.
-- For full marks, ensure your GitHub repo is named `deploy_agent_GithubUsername` and provide a video walkthrough as required by your rubric.
 
 ## Example
 ```
-$ ./attendance_tracker.sh test_run
-[OK] python3 is installed: Python 3.9.6
-Directory structure created in attendance_tracker_test_run.
+$ ./attendance_tracker.sh test
+[OK] python3 is installed: Python 3.14.0
+Directory structure created in attendance_tracker_test.
 Do you want to update attendance thresholds? (y/N): y
 Enter new Warning threshold (default 75): 70
 Enter new Failure threshold (default 50): 40
 Thresholds updated in config.json.
 Setup complete.
 ```
-
-If you have any questions or issues, please refer to the script comments or contact the project maintainer.
